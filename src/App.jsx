@@ -84,9 +84,14 @@ export default function TechPalsLandingPage() {
       <header className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-blue-600 flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-600/40">
-              TP
-            </div>
+            
+          <img
+                  src="/logo.png"
+                  alt="TechPals Logo"
+                  className="w-12 h-12 object-contain"
+          />
+
+            
             <div>
               <h1 className="text-2xl font-black tracking-tight">TechPals</h1>
               <p className="text-xs text-gray-400">Software Agency</p>
