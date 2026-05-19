@@ -35,26 +35,37 @@ export default function TechPalsLandingPage() {
     },
   ]
 
-  const projects = [
-    {
-      title: 'Luxury Real Estate Platform',
-      category: 'Business Website',
-      image:
-        'https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'AI SaaS Dashboard',
-      category: 'AI Product',
-      image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'Premium E-Commerce',
-      category: 'Online Store',
-      image:
-        'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop',
-    },
-  ]
+const projects = [
+  {
+    title: 'Premium E-Commerce Store',
+    category: 'E-Commerce Website',
+    slug: 'ecommerce-store',
+    description:
+      'Designed to deliver a seamless shopping experience with modern UI, smooth navigation and conversion-focused layouts.',
+    image:
+      'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop',
+  },
+
+  {
+    title: 'Restaurant Website',
+    category: 'Restaurant Platform',
+    slug: 'restaurant-website',
+    description:
+      'A visually rich restaurant experience featuring elegant layouts, online reservations and immersive food presentation.',
+    image:
+      'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop',
+  },
+
+  {
+    title: 'Coaching Management System',
+    category: 'Management Software',
+    slug: 'coaching-management-system',
+    description:
+      'Built to simplify coaching operations with smart student management, streamlined workflows and intuitive dashboards.',
+    image:
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
+  },
+]
 
   const stats = [
     { number: 'Sleek', label: 'Design' },
@@ -279,123 +290,183 @@ export default function TechPalsLandingPage() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className="py-28 bg-[#020617]">
+              {/* PROJECTS */}
+<section
+  id="projects"
+  className="relative overflow-hidden py-32 bg-[#020617]"
+>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+  {/* BACKGROUND GLOW */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-3xl rounded-full"></div>
 
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+  <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
 
-            <div>
+    {/* TOP CONTENT */}
+    <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
 
-              <p className="text-blue-400 font-bold uppercase tracking-[4px]">
-                Portfolio
-              </p>
+      <div>
 
-              <h2 className="text-5xl font-black mt-4">
-                Featured Projects
-              </h2>
+        <p className="text-blue-400 font-bold uppercase tracking-[6px]">
+          Portfolio
+        </p>
 
-            </div>
+        <h2 className="text-5xl lg:text-6xl font-black mt-4 leading-tight">
+          Built To
+          <span className="block text-blue-500">
+            Impress
+          </span>
+        </h2>
 
-            <p className="text-gray-400 max-w-2xl leading-8 text-lg">
-              We create modern digital experiences focused on design,
-              performance and user engagement.
-            </p>
+      </div>
+
+      <p className="text-gray-400 max-w-2xl leading-9 text-lg">
+        Every project reflects our vision of combining creativity,
+        functionality and modern technology into a seamless digital experience.
+      </p>
+
+    </div>
+
+    {/* PROJECT CARDS */}
+    <div className="grid lg:grid-cols-3 gap-8 mt-24">
+
+      {projects.map((project, index) => (
+
+        <div
+          key={index}
+          className="group bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-[32px] overflow-hidden hover:-translate-y-4 hover:shadow-2xl hover:shadow-blue-500/10 transition duration-500"
+        >
+
+          {/* IMAGE */}
+          <div className="overflow-hidden relative">
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-72 object-cover brightness-90 group-hover:brightness-100 group-hover:scale-105 transition duration-700"
+            />
 
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mt-20">
+          {/* CONTENT */}
+          <div className="p-8">
 
-            {projects.map((project, index) => (
+            <p className="text-blue-400 font-semibold tracking-wide uppercase text-sm">
+              {project.category}
+            </p>
 
-              <div
-                key={index}
-                className="group bg-white/5 border border-white/10 rounded-[32px] overflow-hidden hover:-translate-y-3 transition duration-300"
-              >
+            <h3 className="text-3xl font-black mt-4 leading-snug">
+              {project.title}
+            </h3>
 
-                <div className="overflow-hidden">
+            <p className="text-gray-400 leading-7 mt-5">
+              {project.description}
+            </p>
 
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
-                  />
+            <a
+              href={`/projects/${project.slug}`}
+              className="mt-8 inline-flex items-center gap-3 border border-white/10 hover:border-blue-500 hover:bg-blue-500/10 px-6 py-3 rounded-2xl transition duration-300 group/button"
+            >
 
-                </div>
+              <span>
+                View Project
+              </span>
 
-                <div className="p-8">
+              <span className="group-hover/button:translate-x-1 transition">
+                →
+              </span>
 
-                  <p className="text-blue-400 font-semibold">
-                    {project.category}
-                  </p>
-
-                  <h3 className="text-3xl font-black mt-3">
-                    {project.title}
-                  </h3>
-
-                </div>
-
-              </div>
-
-            ))}
+            </a>
 
           </div>
 
         </div>
 
-      </section>
-      {/* ABOUT */}
-<section id="about" className="py-28 bg-white text-black">
+      ))}
 
-  <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-20 items-center">
-
-    <div>
-      <img
-        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
-        alt="team"
-        className="rounded-[40px] shadow-2xl"
-      />
     </div>
 
+  </div>
+
+</section>
+      
+      {/* ABOUT */}
+{/* ABOUT */}
+<section
+  id="about"
+  className="py-32 bg-white text-black relative overflow-hidden"
+>
+
+  <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 blur-3xl rounded-full opacity-40"></div>
+
+  <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-24 items-center relative z-10">
+
+    {/* LEFT IMAGE */}
+    <div className="relative">
+
+      <div className="absolute -top-6 -left-6 w-full h-full border-2 border-blue-500 rounded-[40px]"></div>
+
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+        alt="TechPals Team"
+        className="relative rounded-[40px] shadow-2xl object-cover"
+      />
+
+    </div>
+
+    {/* RIGHT CONTENT */}
     <div>
 
-      <p className="text-blue-600 font-bold uppercase tracking-[4px]">
+      <p className="text-blue-600 font-bold uppercase tracking-[6px]">
         About TechPals
       </p>
 
-      <h2 className="text-5xl font-black mt-5 leading-tight">
-        We Create Software That Helps Businesses Grow Faster
+      <h2 className="text-5xl lg:text-6xl font-black leading-tight mt-6">
+        Turning Ideas Into
+        <span className="block text-blue-600">
+          Digital Reality
+        </span>
       </h2>
 
-      <p className="text-gray-600 leading-8 text-lg mt-8">
+      <p className="text-gray-600 text-lg leading-9 mt-8">
         TechPals is a modern software company focused on building premium
-        digital experiences, scalable applications and futuristic solutions
-        for startups and businesses.
+        digital experiences, scalable applications and futuristic solutions.
+        We believe in transforming ideas into impactful products through
+        clean design, smart development and innovative thinking.
       </p>
 
-      <div className="grid grid-cols-2 gap-6 mt-10">
+      <div className="grid grid-cols-2 gap-6 mt-12">
 
-        <div className="bg-gray-100 rounded-3xl p-6">
+        <div className="bg-gray-100 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
+
           <h3 className="text-4xl font-black text-blue-600">
             Modern
           </h3>
 
-          <p className="text-gray-600 mt-2">
-            Development
+          <p className="text-gray-600 mt-3">
+            Clean & scalable development
           </p>
+
         </div>
 
-        <div className="bg-gray-100 rounded-3xl p-6">
+        <div className="bg-gray-100 rounded-3xl p-8 hover:-translate-y-2 transition duration-300">
+
           <h3 className="text-4xl font-black text-blue-600">
             Creative
           </h3>
 
-          <p className="text-gray-600 mt-2">
-            Solutions
+          <p className="text-gray-600 mt-3">
+            Futuristic digital experiences
           </p>
+
         </div>
 
       </div>
+
+      <button className="mt-12 bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-2xl text-white font-bold shadow-xl shadow-blue-600/30">
+        Make It Real
+      </button>
 
     </div>
 
