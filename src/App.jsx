@@ -408,9 +408,9 @@ const projects = [
       <div className="absolute -top-6 -left-6 w-full h-full border-2 border-blue-500 rounded-[40px]"></div>
 
       <img
-        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
-        alt="TechPals Team"
-        className="relative rounded-[40px] shadow-2xl object-cover"
+        src="/about-section.png"
+        alt="TechPals Founders"
+        className="relative rounded-[40px] shadow-2xl object-cover w-full"
       />
 
     </div>
@@ -463,11 +463,6 @@ const projects = [
         </div>
 
       </div>
-
-      <button className="mt-12 bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-2xl text-white font-bold shadow-xl shadow-blue-600/30">
-        Make It Real
-      </button>
-
     </div>
 
   </div>
