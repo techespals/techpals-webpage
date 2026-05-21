@@ -85,7 +85,7 @@ const projects = [
           <div className="flex items-center gap-3">
 
             <img
-              src="/logo.jpg"
+              src="/logo.png"
               alt="TechPals Logo"
               className="w-12 h-12 object-contain"
             />
