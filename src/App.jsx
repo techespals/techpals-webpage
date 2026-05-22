@@ -1,4 +1,5 @@
 import './App.css'
+import ContactForm from "./ContactForm"
 import { useState } from 'react'
 
 
@@ -535,53 +536,9 @@ const projects = [
 
     </div>
 
-    <form className="mt-16 grid md:grid-cols-2 gap-6">
-
-      <input
-        type="text"
-        placeholder="Your Name"
-        className="bg-white/5 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-blue-500"
-      />
-
-      <input
-        type="email"
-        placeholder="Email Address"
-        className="bg-white/5 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-blue-500"
-      />
-
-      <input
-        type="text"
-        placeholder="Company Name"
-        className="bg-white/5 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-blue-500"
-      />
-      <select className="bg-white/5 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-blue-500 text-gray-400">
-
-        <option value="" disabled selected>
-          Project Type
-        </option>
-
-        <option>Portfolio Website</option>
-        <option>Business Website</option>
-        <option>E-Commerce Store</option>
-        <option>AI Software</option>
-        <option>Mobile App</option>
-        <option>Custom Software</option>
-
-      </select>
-
-      <textarea
-        placeholder="Tell us about your project..."
-        rows="6"
-        className="md:col-span-2 bg-white/5 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-blue-500"
-      ></textarea>
-
-      <button
-        className="md:col-span-2 bg-blue-600 hover:bg-blue-500 transition py-5 rounded-2xl font-black text-lg shadow-2xl shadow-blue-600/30"
-      >
-        Submit Inquiry
-      </button>
-
-    </form>
+      <div className="mt-16">
+        <ContactForm />
+      </div>
     <div className="grid md:grid-cols-3 gap-6 mt-16">
 
   <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center">
