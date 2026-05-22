@@ -1,40 +1,54 @@
 import './App.css'
+import { useState } from 'react'
 
-export default function TechPalsLandingPage() {
 
-  const services = [
-    {
-      title: 'Custom Web Development',
-      desc: 'Modern, scalable and lightning-fast websites tailored for your business.',
-      icon: '💻',
-    },
-    {
-      title: 'UI/UX Design',
-      desc: 'Beautiful and intuitive interfaces designed for better conversions.',
-      icon: '🎨',
-    },
-    {
-      title: 'AI Software Solutions',
-      desc: 'AI-powered applications and automation systems for modern businesses.',
-      icon: '🤖',
-    },
-    {
-      title: 'Mobile App Development',
-      desc: 'Premium Android and iOS applications with smooth user experience.',
-      icon: '📱',
-    },
-    {
-      title: 'SEO & Marketing',
-      desc: 'Rank higher on Google and grow your business organically.',
-      icon: '📈',
-    },
-    {
-      title: 'Cloud & Deployment',
-      desc: 'Secure cloud hosting, CI/CD pipelines and enterprise deployment.',
-      icon: '☁️',
-    },
-  ]
 
+export default function TechesPalsLandingPage() {
+
+const services = [
+  {
+    title: 'Custom Web Development',
+    desc: 'We build fast, modern and mobile-friendly websites for your business.',
+    icon: '💻',
+    details:
+      'We create professional websites that look modern, load fast and work smoothly on mobile, tablet and desktop. This is perfect for businesses, portfolios, startups and service-based brands.',
+  },
+  {
+    title: 'UI/UX Design',
+    desc: 'We design clean and easy-to-use screens that customers love.',
+    icon: '🎨',
+    details:
+      'We design simple, attractive and user-friendly interfaces. Our focus is to make your website or app easy to understand, easy to use and visually impressive.',
+  },
+  {
+    title: 'AI Software Solutions',
+    desc: 'We create smart tools that save time and automate repeated work.',
+    icon: '🤖',
+    details:
+      'We build AI-powered tools like chatbots, automation systems and smart dashboards that help businesses save time, reduce manual work and improve customer experience.',
+  },
+  {
+    title: 'Mobile App Development',
+    desc: 'We build smooth Android and iOS apps for your business idea.',
+    icon: '📱',
+    details:
+      'We develop mobile apps that are simple, smooth and useful. Whether you need an app for customers, staff or business management, we can build it according to your needs.',
+  },
+  {
+    title: 'Custom Software',
+    desc: 'We build software according to your exact business needs.',
+    icon: '⚙️',
+    details:
+      'We create custom software for businesses that need something specific, such as management systems, dashboards, booking systems, internal tools or workflow automation.',
+  },
+  {
+    title: 'E-Commerce Solutions',
+    desc: 'We create online stores where customers can browse, order and pay easily.',
+    icon: '🛒',
+    details:
+      'We build online stores with product pages, cart, checkout, payment setup and order management. This helps businesses sell products online in a professional way.',
+  },
+]
 const projects = [
   {
     title: 'Premium E-Commerce Store',
@@ -66,13 +80,7 @@ const projects = [
       'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
   },
 ]
-
-  const stats = [
-    { number: 'Sleek', label: 'Design' },
-    { number: 'Smart', label: 'Solutions' },
-    { number: 'Elite', label: 'Ideas' },
-    { number: 'Swift', label: 'Builds' },
-  ]
+  const [selectedService, setSelectedService] = useState(null)
 
   return (
     <div className="bg-[#030712] text-white min-h-screen overflow-hidden">
@@ -86,13 +94,13 @@ const projects = [
 
             <img
               src="/log.png"
-              alt="TechPals Logo"
+              alt="TechesPals Logo"
               className="w-12 h-12 object-contain"
             />
 
             <div>
               <h1 className="text-2xl font-black tracking-tight">
-                TechPals
+                TechesPals
               </h1>
 
               <p
@@ -166,69 +174,41 @@ const projects = [
             </h1>
 
             <p className="text-gray-400 text-lg leading-8 mt-8 max-w-xl">
-              TechPals helps startups and businesses launch premium websites,
-              AI products, SaaS platforms and mobile apps that attract
-              customers and grow revenue.
+              At TechesPals, every project is built with passion, honesty and full
+              dedication. We treat your business like our own and focus on creating
+              digital products that truly make a difference — so you always feel
+              confident that your trust and investment are in the right place.
             </p>
 
-            <div className="flex flex-wrap gap-5 mt-10">
+            <p className="text-gray-500 mt-10 text-sm tracking-wide">
+              Built with honesty, creativity and long-term vision.
+            </p>
 
-              <button className="bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-2xl font-bold shadow-2xl shadow-blue-600/30">
-                Start Your Project
-              </button>
-
-              <button className="border border-white/20 hover:border-blue-500 hover:bg-blue-500/10 transition px-8 py-4 rounded-2xl font-semibold">
-                View Portfolio
-              </button>
-
-            </div>
-
-            {/* STATS */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14">
-
-              {stats.map((item, index) => (
-
-                <div
-                  key={index}
-                  className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-xl flex flex-col items-center justify-center text-center min-h-[140px]"
-                >
-
-                  <h2 className="text-2xl font-black text-blue-400 whitespace-nowrap">
-                    {item.number}
-                  </h2>
-
-                  <p className="text-gray-400 text-sm mt-3 tracking-wide">
-                    {item.label}
-                  </p>
-
-                </div>
-
-              ))}
-
-            </div>
-
+           
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative">
+      
+            <div className="relative">
 
-            <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/30 blur-3xl rounded-full"></div>
+              <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/30 blur-3xl rounded-full"></div>
 
-            <div className="relative bg-gradient-to-br from-[#0f172a] to-[#020617] border border-white/10 rounded-[40px] p-5 shadow-2xl shadow-blue-900/30">
+              <div className="relative bg-gradient-to-br from-[#0f172a] to-[#020617] border border-white/10 rounded-[40px] p-5 shadow-2xl shadow-blue-900/30">
 
-              <div className="relative">
-                <img
-                  src="/log.png"
-                  alt="TechPals"
-                  className="w-full rounded-[30px]"
-                />
+                <div className="relative">
+
+                  <img
+                    src="/log.png"
+                    alt="TechPals"
+                    className="w-full rounded-[30px]"
+                  />
+
+                </div>
+
+              </div>
               </div>
 
-            </div>
-
-          </div>
-
-        </div>
+</div>
 
       </section>
 
@@ -274,22 +254,62 @@ const projects = [
                 <p className="text-gray-600 leading-7 mt-4">
                   {service.desc}
                 </p>
-
-                <button className="mt-8 text-blue-600 font-bold hover:translate-x-2 transition">
-                  Learn More →
-                </button>
+                <button
+                onClick={() => setSelectedService(service)}
+                className="mt-8 text-blue-600 font-bold hover:translate-x-2 transition"
+              >
+                Learn More →
+              </button>
+                            
 
               </div>
 
             ))}
 
           </div>
+          {selectedService && (
+  <div className="fixed inset-0 z-[999] bg-black/70 backdrop-blur-sm flex items-center justify-center px-6">
+    
+    <div className="bg-white text-black max-w-2xl w-full rounded-[32px] p-8 relative shadow-2xl">
+      
+      <button
+        onClick={() => setSelectedService(null)}
+        className="absolute top-5 right-6 text-2xl font-bold text-gray-500 hover:text-black"
+      >
+        ×
+      </button>
+
+      <div className="text-5xl">
+        {selectedService.icon}
+      </div>
+
+      <h2 className="text-4xl font-black mt-6">
+        {selectedService.title}
+      </h2>
+
+      <p className="text-gray-600 leading-8 text-lg mt-6">
+        {selectedService.details}
+      </p>
+
+      <a
+        href="#contact"
+        onClick={() => setSelectedService(null)}
+        className="mt-8 inline-block bg-black text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-600 transition"
+      >
+        Start Project
+      </a>
+
+    </div>
+
+  </div>
+)}
 
         </div>
 
       </section>
 
-      {/* PROJECTS */}
+      {/*Detail*/}
+    
               {/* PROJECTS */}
 <section
   id="projects"
@@ -403,17 +423,39 @@ const projects = [
   <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-24 items-center relative z-10">
 
     {/* LEFT IMAGE */}
-    <div className="relative">
+   <div className="relative">
 
-      <div className="absolute -top-6 -left-6 w-full h-full border-2 border-blue-500 rounded-[40px]"></div>
+  <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full"></div>
 
-      <img
-        src="/about.png"
-        alt="TechPals Founders"
-        className="relative rounded-[40px] shadow-2xl object-cover w-full"
-      />
+  <img
+    src="/abt.png"
+    alt="TechesPals Team"
+    className="relative rounded-[40px] shadow-2xl object-cover w-full border border-white/10"
+  />
 
-    </div>
+  <div className="grid grid-cols-3 gap-4 mt-6">
+
+  <div className="bg-gray-100 border border-gray-200 rounded-2xl px-5 py-4 text-center shadow-sm">
+    <h3 className="text-blue-600 text-2xl font-black">100%</h3>
+    <p className="text-gray-600 text-sm mt-1">Client Focus</p>
+  </div>
+
+  <div className="bg-gray-100 border border-gray-200 rounded-2xl px-5 py-4 text-center shadow-sm">
+    <h3 className="text-blue-600 text-2xl font-black">24/7</h3>
+    <p className="text-gray-600 text-sm mt-1">Support</p>
+  </div>
+
+  <div className="bg-gray-100 border border-gray-200 rounded-2xl px-5 py-4 text-center shadow-sm">
+    <h3 className="text-blue-600 text-2xl font-black">Real</h3>
+    <p className="text-gray-600 text-sm mt-1">Commitment</p>
+  </div>
+
+
+
+  </div>
+
+</div>
+
 
     {/* RIGHT CONTENT */}
     <div>
@@ -564,7 +606,7 @@ const projects = [
     </h3>
 
     <p className="text-gray-400">
-      +91 8057798204
+      +91 3847787363
     </p>
 
   </div>
