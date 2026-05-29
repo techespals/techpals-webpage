@@ -89,12 +89,27 @@ return (
       className="md:col-span-2 bg-white/5 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-blue-500 text-white"
     ></textarea>
 
-    <button
-      type="submit"
-      className="md:col-span-2 bg-blue-600 hover:bg-blue-500 transition py-5 rounded-2xl font-black text-lg shadow-2xl shadow-blue-600/30"
-    >
-      Submit Inquiry
-    </button>
+   <button
+  type="submit"
+  className="
+    md:col-span-2
+    bg-white/5
+    backdrop-blur-md
+    border border-white/10
+    text-white
+    py-5
+    rounded-2xl
+    font-black
+    text-lg
+    transition-all duration-300
+    hover:bg-white/10
+    hover:border-white/20
+    hover:-translate-y-1
+    shadow-[0_0_25px_rgba(255,255,255,0.05)]
+  "
+>
+  Submit Inquiry
+</button>
 
   </form>
 )

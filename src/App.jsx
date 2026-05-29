@@ -94,13 +94,27 @@ export default function TechesPalsLandingPage() {
               className="brand-icon"
             />
 
-            <div>
-              <h1>
-                Teches<span>Pals</span>
-              </h1>
+            <div className="brand">
 
-              <p>MAKE IT REAL</p>
-            </div>
+
+        <div className="brand-text">
+          <h1 className="brand-title">
+            {"TECHESPALS".split("").map((letter, index) => (
+              <span
+                key={index}
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                {letter}
+              </span>
+            ))}
+          </h1>
+
+          <p className="brand-tagline">
+            MAKE IT REAL
+          </p>
+        </div>
+      </div>
+
           </div>
 
           <nav className="nav-links">
