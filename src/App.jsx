@@ -336,6 +336,51 @@ export default function TechesPalsLandingPage() {
 
         </div>
       </section>
+          
+          {/* BRAND ESSENCE SECTION */}
+          <section id="brand-essence" className="brand-essence-section">
+            <div className="brand-essence-container">
+
+              <div className="brand-essence-heading">
+                <p>Brand Essence</p>
+                <h2>Our Visual Identity</h2>
+                <span>
+                  Pictures, posters and creative visuals that represent TechesPals.
+                </span>
+              </div>
+
+              <div className="brand-essence-grid">
+                <div className="brand-showcase-card">
+                  <img src="/brand1.png" alt="" />
+                  <img src="/brand2.jpg" alt="" />
+                  <img src="/brand3.jpg" alt="" />
+                  <img src="/brand4.jpg" alt="" />
+                </div>
+
+                <div className="brand-showcase-card">
+                  <img src="/brand5.png" alt="" />
+                  <img src="/brand6.jpg" alt="" />
+                  <img src="/brand7.jpg" alt="" />
+                  <img src="/brand8.jpg" alt="" />
+                </div>
+
+                <div className="brand-showcase-card">
+                  <img src="/brand9.jpg" alt="" />
+                  <img src="/brand10.jpg" alt="" />
+                  <img src="/brand11.jpg" alt="" />
+                  <img src="/brand12.jpg" alt="" />
+                </div>
+
+                <div className="brand-showcase-card">
+                  <img src="/brand13.jpg" alt="" />
+                  <img src="/brand14.jpg" alt="" />
+                  <img src="/brand15.png" alt="" />
+                  <img src="/brand16.png" alt="" />
+                </div>
+              </div>
+
+            </div>
+          </section>
 
       {/* CONTACT */}
       <section id="contact" className="contact-section">
@@ -381,4 +426,5 @@ export default function TechesPalsLandingPage() {
 
     </div>
   )
+  
 }
