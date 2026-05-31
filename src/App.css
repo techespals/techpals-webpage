@@ -778,6 +778,22 @@ body {
     0 0 60px rgba(85, 93, 80, 0.18),
     0 30px 90px rgba(0,0,0,0.65);
 }
+.service-card:hover .service-icon {
+  filter: grayscale(0) brightness(1.2);
+  transform: scale(1.08);
+}
+.service-card h3,
+.service-card p {
+  transition: 0.4s ease;
+}
+
+.service-card:hover h3 {
+  color: #ffffff;
+}
+
+.service-card:hover p {
+  color: #d4d4d4;
+}
 
 .service-icon {
   width: 74px;
@@ -786,10 +802,12 @@ body {
   display: grid;
   place-items: center;
   font-size: 32px;
-  background:
-    linear-gradient(145deg, #202124, #0b0b0c);
+  background: linear-gradient(145deg, #202124, #0b0b0c);
   border: 1px solid rgba(255,255,255,0.10);
-  filter: grayscale(1);
+
+  filter: grayscale(1) brightness(0.55);
+  transition: 0.45s ease;
+
   box-shadow:
     inset 0 0 20px rgba(255,255,255,0.04),
     0 16px 35px rgba(0,0,0,0.55);
