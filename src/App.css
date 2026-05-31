@@ -1259,79 +1259,108 @@ input[type="submit"] {
   }
 
 }
-/* BRAND ESSENCE FORCE FIX */
+/* =========================
+   BRAND ESSENCE SECTION
+========================= */
 
-#brand-essence {
-  padding: 120px 0 !important;
-  background: #000 !important;
-  overflow: hidden !important;
+.brand-essence{
+  padding:140px 0;
+  background:#000;
+  overflow:hidden;
 }
 
-#brand-essence .brand-essence-container {
-  max-width: 1240px !important;
-  margin: 0 auto !important;
-  padding: 0 28px !important;
+.brand-header{
+  text-align:center;
+  margin-bottom:70px;
 }
 
-#brand-essence .brand-essence-heading {
-  text-align: center !important;
-  margin-bottom: 60px !important;
+.brand-header p{
+  color:#7d7d7d;
+  letter-spacing:5px;
+  font-size:12px;
 }
 
-#brand-essence .brand-essence-grid {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 22px !important;
+.brand-header h2{
+  color:white;
+  font-size:58px;
+  margin-top:10px;
 }
 
-#brand-essence .brand-showcase-card {
-  position: relative !important;
-  height: 260px !important;
-  overflow: hidden !important;
-  border-radius: 28px !important;
-  background: #111 !important;
+/* =========================
+   SLIDER WRAPPER
+========================= */
+
+.brand-slider{
+  width:100%;
+  overflow:hidden;
+  position:relative;
 }
 
-#brand-essence .brand-showcase-card img {
-  position: absolute !important;
-  inset: 0 !important;
+/* =========================
+   MOVING TRACK
+========================= */
 
-  width: 100% !important;
-  height: 100% !important;
+.brand-track{
+  display:flex;
+  gap:28px;
+  width:max-content;
 
-  object-fit: cover !important;
-  display: block !important;
-
-  opacity: 0;
-  filter: grayscale(1) brightness(0.55) contrast(1.15);
-
-  animation: brandFade 16s infinite;
+  animation: scrollBrand 35s linear infinite;
 }
 
-#brand-essence .brand-showcase-card img:nth-child(1) {
-  animation-delay: 0s;
+/* .brand-track:hover{
+  animation-play-state:paused;
+} */
+
+/* =========================
+   IMAGE CARDS
+========================= */
+
+.brand-track img{
+  width:260px;
+  height:360px;
+
+  object-fit:cover;
+
+  border-radius:30px;
+
+  filter:
+    grayscale(1)
+    brightness(.45);
+
+  transition:.6s ease;
+
+  flex-shrink:0;
 }
 
-#brand-essence .brand-showcase-card img:nth-child(2) {
-  animation-delay: 4s;
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.brand-track img:hover{
+
+  filter:
+    grayscale(0)
+    brightness(1);
+
+  transform:translateY(-12px);
+
+  box-shadow:
+    0 20px 60px rgba(255,255,255,.12);
 }
 
-#brand-essence .brand-showcase-card img:nth-child(3) {
-  animation-delay: 8s;
-}
+/* =========================
+   INFINITE MOVE
+========================= */
 
-#brand-essence .brand-showcase-card img:nth-child(4) {
-  animation-delay: 12s;
-}
+@keyframes scrollBrand{
 
-#brand-essence .brand-showcase-card:hover img {
-  filter: grayscale(0) brightness(1) contrast(1.05);
-}
+  from{
+    transform:translateX(0);
+  }
 
-@keyframes brandFade {
-  0% { opacity: 0; }
-  8% { opacity: 1; }
-  25% { opacity: 1; }
-  33% { opacity: 0; }
-  100% { opacity: 0; }
+  to{
+    transform:translateX(-50%);
+  }
+
 }
