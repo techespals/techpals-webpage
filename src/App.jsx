@@ -57,6 +57,7 @@ export default function TechesPalsLandingPage() {
         'A modern shopping platform focused on smooth browsing, clean product pages and easy checkout.',
       image:
         'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop',
+        link:'#'
     },
     {
       title: 'Restaurant Website',
@@ -66,15 +67,15 @@ export default function TechesPalsLandingPage() {
         'A stylish restaurant website with menu showcase, reservation flow and premium food presentation.',
       image:
         'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop',
+        link:'#'
     },
     {
       title: 'Coaching Management System',
       category: 'Management Software',
-      slug: 'coaching-management-system',
       description:
-        'A smart system to manage students, batches, fees, attendance and coaching operations easily.',
-      image:
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
+        'A complete coaching management system to manage students, fees, batches and academic records.',
+      image: '/coaching-manager.png', // ya jo image use kar rahe ho
+      link: 'https://coaching-manager-37a4.vercel.app'
     },
   ]
 
@@ -268,9 +269,14 @@ export default function TechesPalsLandingPage() {
                   <h3>{project.title}</h3>
                   <span>{project.description}</span>
 
-                  <a href={`/projects/${project.slug}`}>
-                    View Project →
-                  </a>
+                  <a
+                  href={project.link || '#'}
+                  target={project.link === '#' ? '_self' : '_blank'}
+                  rel="noopener noreferrer"
+                  className="project-btn"
+                >
+                  View Project →
+                </a>
                 </div>
               </div>
             ))}

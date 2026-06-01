@@ -26,7 +26,7 @@ function ContactForm() {
     try {
 
       await axios.post(
-        "http://localhost:8080/api/inquiry",
+        "https://techpals-backend-production-9ae9.up.railway.app",
         formData
       )
 
