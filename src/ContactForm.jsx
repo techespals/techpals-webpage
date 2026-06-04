@@ -26,7 +26,7 @@ function ContactForm() {
     try {
 
       await axios.post(
-        "https://techpals-backend-cvse.onrender.com/api/inquiries",
+        "https://techpals-backend-cvse.onrender.com/api/inquiry",
         formData
       )
 
