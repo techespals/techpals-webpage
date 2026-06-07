@@ -75,7 +75,7 @@ export default function TechesPalsLandingPage() {
       description:
         'A complete coaching management system to manage students, fees, batches and academic records.',
       image: '/coaching-manager.png', // ya jo image use kar rahe ho
-      link: 'https://coaching-manager-37a4.vercel.app'
+      link: 'https://coaching.techespals.com'
     },
   ]
 
