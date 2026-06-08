@@ -406,7 +406,7 @@ export default function TechesPalsLandingPage() {
 
             <div>
               <h3>Call Us</h3>
-              <p>+91 3847787363</p>
+              <p>+91 8057798204</p>
             </div>
 
             <div>
