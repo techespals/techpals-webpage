@@ -48,7 +48,7 @@ export default function TechesPalsLandingPage() {
     },
   ]
 
-  const projects = [
+  const Projects = [
     {
       title: 'Premium E-Commerce Store',
       category: 'E-Commerce Website',
