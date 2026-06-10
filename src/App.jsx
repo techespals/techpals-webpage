@@ -67,7 +67,7 @@ export default function TechesPalsLandingPage() {
         'A stylish restaurant website with menu showcase, reservation flow and premium food presentation.',
       image:
         'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop',
-        link:'#'
+        link:'https://restaurant.techespals.com'
     },
     {
       title: 'Coaching Management System',
