@@ -3,7 +3,8 @@ import { useState } from "react"
 import {
   FaInstagram,
   FaLinkedin,
-  FaXTwitter
+  FaXTwitter,
+  FaYoutube
 } from "react-icons/fa6";
 
 function ContactForm() {
@@ -150,14 +151,14 @@ return (
       </span>
 
      <h3 className="text-3xl md:text-4xl font-black text-white mb-4">
-  Let's Build Something Amazing Together
-</h3>
+      Let's Build Something Amazing Together
+    </h3>
 
-<p className="text-gray-400 max-w-2xl mx-auto leading-8 text-lg">
-  Prefer social media? Connect with <span className="text-white font-semibold">TechesPals</span> on
-  LinkedIn, Instagram, or X to explore our latest projects, startup journey,
-  and technology insights. We would love to hear about your next big idea.
-</p>
+    <p className="text-gray-400 max-w-2xl mx-auto leading-8 text-lg">
+      Prefer social media? Connect with <span className="text-white font-semibold">TechesPals</span> on
+      LinkedIn, Instagram, or X to explore our latest projects, startup journey,
+      and technology insights. We would love to hear about your next big idea.
+    </p>
 
       <div className="flex justify-center gap-6 mt-8 flex-wrap">
         {/* LinkedIn */}
@@ -225,6 +226,28 @@ return (
           "
         >
           <FaXTwitter className="group-hover:scale-110 transition-transform" />
+        </a>
+        {/* YouTube */}
+        <a
+          href="https://www.youtube.com/@TechesPals._.official"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            group
+            w-16 h-16
+            rounded-2xl
+            bg-white/5
+            border border-white/10
+            flex items-center justify-center
+            text-white text-3xl
+            transition-all duration-300
+            hover:-translate-y-2
+            hover:bg-red-500/20
+            hover:border-red-500/50
+            hover:shadow-[0_0_30px_rgba(239,68,68,0.35)]
+          "
+        >
+          <FaYoutube className="group-hover:scale-110 transition-transform" />
         </a>
       </div>
 
